@@ -1,3 +1,5 @@
-export default function First() {
-    return <h1>First Blog</h1>
+import { redirect } from "next/navigation";
+
+export default function FirstBlog() {
+  redirect("/");
 }

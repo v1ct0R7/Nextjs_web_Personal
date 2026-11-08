@@ -1,10 +1,5 @@
-export default async function RevieusForm({ params, }: {
-    params: Promise<{ productID: string; reviewid: string }>;
-}) {
-    const { productID, reviewid } = await params;
+import { redirect } from "next/navigation";
 
-    return (
-        <h1>
-            "This product {productID} are my reviews{reviewid}"
-        </h1>);
+export default function ReviewDetails() {
+  redirect("/");
 }

@@ -1,3 +1,5 @@
-export default function second() {
-    return <h1>Second Blog</h1>
+import { redirect } from "next/navigation";
+
+export default function SecondBlog() {
+  redirect("/");
 }

@@ -1,3 +1,5 @@
-{
-    "I am really satistied"
+import { redirect } from "next/navigation";
+
+export default function Reviews() {
+  redirect("/");
 }

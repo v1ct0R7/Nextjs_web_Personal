@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elvis Murati — Portfolio
 
-## Getting Started
+A bilingual Albanian / English personal portfolio built with the existing Next.js App Router and TypeScript application.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) for English and `/sq` for Albanian.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Inquiry email setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy the safe variable names from `.env.example` into a local `.env.local` or your hosting provider’s server-side environment configuration:
 
-## Learn More
+- `RESEND_API_KEY` — a Resend API key. Keep it server-side; never prefix it with `NEXT_PUBLIC_` or commit its value.
+- `RESEND_FROM_EMAIL` — a sender address on a domain/identity verified in Resend. The recipient is configured as `elvismurati15@gmail.com`.
+- `SITE_URL` — optional until the production domain is known. When set, use only the real HTTPS origin. It enables canonical and language alternate URLs plus absolute sitemap URLs. Do not use a placeholder value in production.
 
-To learn more about Next.js, take a look at the following resources:
+The inquiry endpoint validates submissions server-side and sends through Resend. Until the API key and verified sender are configured, it returns an error state and the page offers a direct email link; it does not pretend a message was delivered.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Validation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project cards intentionally show a pending state until real project names, descriptions, technologies, links, and imagery are provided.

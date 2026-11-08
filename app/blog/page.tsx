@@ -1,3 +1,5 @@
-export default function blog() {
-    return <h1>My Blog</h1>
+import { redirect } from "next/navigation";
+
+export default function Blog() {
+  redirect("/");
 }
