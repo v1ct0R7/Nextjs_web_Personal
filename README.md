@@ -63,3 +63,4 @@ npm run build
 ---
 
 Krijuar nga **Elvis Murati**.
+_You can't do epic with basic people_
