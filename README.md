@@ -1,27 +1,58 @@
 # Elvis Murati — Portfolio
 
-A bilingual Albanian / English personal portfolio built with the existing Next.js App Router and TypeScript application.
+Portofoli personal i Elvis Muratit, i krijuar për të prezantuar punën, aftësitë dhe mënyrën time të qasjes në zhvillimin e përvojave digjitale.
 
-## Run locally
+## Faqja online
+
+🔗 **[Vizito portofolin](https://elvismurati-creator-bumwvjo2a-v1ct0r7.vercel.app/)**
+
+Faqja është e disponueshme në **anglisht** dhe **shqip**.
+
+## Pamje nga projekti
+
+![Pamje e faqes kryesore të portofolit të Elvis Muratit](./public/images/portfolio-preview.png)
+
+## Rreth projektit
+
+Portofoli është një faqe personale, responsive dhe dygjuhëshe, që prezanton:
+
+- Prezantimin dhe qasjen time profesionale
+- Ekspertizën dhe punën time
+- Mënyrat për të më kontaktuar
+- Përmbajtje në anglisht dhe shqip
+
+## Teknologjitë
+
+- [Next.js](https://nextjs.org/) 16
+- [React](https://react.dev/) 19
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Nisja në kompjuterin tënd
+
+Nevojitet [Node.js](https://nodejs.org/) dhe npm.
 
 ```bash
+git clone https://github.com/v1ct0R7/Nextjs_web_Personal.git
+cd Nextjs_web_Personal
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) for English and `/sq` for Albanian.
+Hape [http://localhost:3000](http://localhost:3000) në shfletues.
 
-## Inquiry email setup
+## Konfigurimi i formularit të kontaktit
 
-Copy the safe variable names from `.env.example` into a local `.env.local` or your hosting provider’s server-side environment configuration:
+Për dërgimin e mesazheve nga formulari nevojitet një llogari [Resend](https://resend.com/) dhe një adresë dërguese e verifikuar. Krijo `.env.local` në direktorinë kryesore dhe vendos:
 
-- `RESEND_API_KEY` — a Resend API key. Keep it server-side; never prefix it with `NEXT_PUBLIC_` or commit its value.
-- `RESEND_FROM_EMAIL` — a sender address on a domain/identity verified in Resend. The recipient is configured as `elvismurati15@gmail.com`.
-- `SITE_URL` — optional until the production domain is known. When set, use only the real HTTPS origin. It enables canonical and language alternate URLs plus absolute sitemap URLs. Do not use a placeholder value in production.
+```env
+RESEND_API_KEY=vendos_celesin_tend
+RESEND_FROM_EMAIL=adresa_e_verifikuar
+SITE_URL=https://elvismurati-creator-bumwvjo2a-v1ct0r7.vercel.app
+```
 
-The inquiry endpoint validates submissions server-side and sends through Resend. Until the API key and verified sender are configured, it returns an error state and the page offers a direct email link; it does not pretend a message was delivered.
+Mbaji këto vlera private dhe mos i publiko në GitHub. Për Vercel, shtoji te **Project Settings → Environment Variables** dhe bëj redeploy që ndryshimet të hyjnë në fuqi. Pa konfigurimin e Resend, formulari nuk mund të dërgojë email.
 
-## Validation
+## Kontrolli i projektit
 
 ```bash
 npm run lint
@@ -29,4 +60,6 @@ npx tsc --noEmit
 npm run build
 ```
 
-Project cards intentionally show a pending state until real project names, descriptions, technologies, links, and imagery are provided.
+---
+
+Krijuar nga **Elvis Murati**.
